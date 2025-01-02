@@ -1,6 +1,6 @@
 -- https://sqlbolt.com/lesson/select_queries_introduction
 
--- Movies Table
+-- Movies
 id,title,director,year,length_minutes
 1,Toy Story,John Lasseter,1995,81
 2,A Bugs Life,John Lasseter,1998,95
@@ -17,19 +17,19 @@ id,title,director,year,length_minutes
 13,Brave,Brenda Chapman,2012,102
 14,Monsters University,Dan Scanlon,2013,110
 
--- 1 Find the title of each film
+-- Find the title of each film
 SELECT Title FROM movies;
 
--- 2 Find the director of each film
+-- Find the director of each film
 SELECT Director FROM movies;
 
--- 3 Find the title and director of each film
+-- Find the title and director of each film
 SELECT Title, Director FROM movies;
 
--- 4 Find the title and year of each film
+-- Find the title and year of each film
 SELECT Title, Year FROM movies;
 
--- 5 Find all the information about each film
+-- Find all the information about each film
 SELECT * FROM movies;
 
 
