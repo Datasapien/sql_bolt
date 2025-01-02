@@ -15,4 +15,34 @@ Ecatepec de Morelos,Mexico,1742000,19.601841,-99.050674
 Montreal,Canada,1717767,45.501689,-73.567256
 Chicago,United States,2718782,41.878114,-87.629798
 
+-- List all the Canadian cities and their populations
+SELECT *
+FROM north_american_cities 
+WHERE Country = "Canada";
 
+-- Order all the cities in the United States by their latitude from north to south
+SELECT * 
+FROM north_american_cities 
+WHERE Country = "United States"
+ORDER BY Latitude DESC;
+
+-- List all the cities west of Chicago (Longitude -87.629798) ordered from west to east
+SELECT * 
+FROM north_american_cities
+WHERE Longitude < -87.629798
+ORDER BY Longitude ASC;
+
+-- List the two largest cities in Mexico (by population)
+SELECT * 
+FROM north_american_cities
+WHERE Country = "Mexico"
+ORDER BY Population DESC
+LIMIT 2;
+
+-- List the third and fourth largest cities (by population) in the United States and their population
+SELECT City, Population
+FROM north_american_cities
+WHERE Country = "United States"
+ORDER BY Population DESC
+LIMIT 2
+OFFSET 2;
